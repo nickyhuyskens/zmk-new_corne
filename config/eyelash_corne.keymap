@@ -6,9 +6,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -28,7 +26,6 @@
     trigger-period-ms = <16>;
 };
 
-
 / {
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -40,6 +37,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
         tap-ms = <100>;
     };
 
@@ -180,10 +178,10 @@
 
             display-name = "base";
             bindings = <
-&u_lt 1 TAB   &u_lt 9 Q             &kp W             &kp E                 &kp R               &u_lt 8 T                               &kp UP                     &kp Y        &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
-&kp CAPSLOCK  &u_ht LEFT_COMMAND A  &u_ht LEFT_ALT S  &u_ht LEFT_CONTROL D  &u_ht LEFT_SHIFT F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT           &kp H        &u_ht LEFT_SHIFT J  &u_ht LEFT_CONTROL K  &u_ht LEFT_ALT L  &u_ht LEFT_COMMAND SEMI  &kp ENTER
-&kp LSHFT     &kp Z                 &kp X             &kp C                 &kp V               &kp B       &kp SPACE              &kp DOWN                        &kp N        &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
-                                                      &u_lt 5 LEFT_COMMAND  &u_lt 4 SPACE       &u_lt 3 TAB                                                        &u_lt 7 RET  &u_lt 6 SPACE       &kp BACKSPACE
+&u_lt 1 TAB   &u_lt 9 Q             &kp W             &kp E                 &kp R               &u_lt 8 T                                 &mmv MOVE_UP                     &kp Y        &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
+&kp CAPSLOCK  &u_ht LEFT_COMMAND A  &u_ht LEFT_ALT S  &u_ht LEFT_CONTROL D  &u_ht LEFT_SHIFT F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &u_ht LEFT_SHIFT J  &u_ht LEFT_CONTROL K  &u_ht LEFT_ALT L  &u_ht LEFT_COMMAND SEMI  &kp ENTER
+&kp LSHFT     &kp Z                 &kp X             &kp C                 &u_lt 11 V          &u_lt 12 B   &kp SPACE                    &mmv MOVE_DOWN                   &kp N        &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
+                                                      &u_lt 5 LEFT_COMMAND  &u_lt 4 SPACE       &u_lt 3 TAB                                                                &u_lt 7 RET  &u_lt 6 SPACE       &kp BACKSPACE
             >;
         };
 
@@ -196,10 +194,10 @@
 
             display-name = "BLE";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                                 &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans  &kp C_MUTE                    &mmv MOVE_DOWN                            &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans    &trans     &trans  &trans
+                                        &kp LGUI      &trans        &kp SPACE                                                                    &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -212,91 +210,113 @@
 
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                                          &mmv MOVE_UP                                    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans                      &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans                      &kp C_MUTE   &mmv MOVE_DOWN                     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                                &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &trans    &trans  &trans    &trans    &trans                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans     &kp C_MUTE                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp LGUI  &trans    &kp SPACE                                                                 &kp RET    &trans     &kp RALT
             >;
         };
 
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB    &trans    &trans    &trans     &trans     &trans                                          &mmv MOVE_UP                                    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
-&kp CAPS   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-&kp LSHFT  &trans    &kp LALT  &trans     &trans     &trans                   &kp C_MUTE   &mmv MOVE_DOWN                     &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &kp INS    &trans
-                               &trans     &trans     &trans    &kp RET        &kp BSPC   &kp DEL
+&kp TAB    &trans    &trans    &trans     &trans     &trans                                &mmv MOVE_UP                     &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &trans
+&kp CAPS   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+&kp LSHFT  &trans    &kp LALT  &trans     &trans     &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &kp INS    &trans
+                               &trans     &trans     &trans                                                                 &kp RET        &kp BSPC   &kp DEL
             >;
         };
 
         NUM {
             display-name = "Num";
             bindings = <
-&kp TAB  &kp LBKT  &none   &none   &none   &none                   &mmv MOVE_UP               &none       &kp N7  &kp N8         &kp N9  &kp KP_ASTERISK  &none
-&none    &trans    &trans  &trans  &trans  &none                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &none       &kp N4  &kp N5         &kp N6  &kp KP_MINUS     &none
-&none    &none     &none   &none   &none   &none                   &kp C_MUTE   &mmv MOVE_DOWN                     &none       &kp N1  &kp N2         &kp N3  &kp KP_PLUS      &none
-                           &none   &none   &none    &kp KP_DOT  &kp N0  &kp BACKSPACE
+&kp TAB  &kp LBKT  &none   &none   &none   &none                                &mmv MOVE_UP                     &none       &kp N7  &kp N8         &kp N9  &kp KP_ASTERISK  &none
+&none    &trans    &trans  &trans  &trans  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none       &kp N4  &kp N5         &kp N6  &kp KP_MINUS     &none
+&none    &none     &none   &none   &none   &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &none       &kp N1  &kp N2         &kp N3  &kp KP_PLUS      &none
+                           &none   &none   &none                                                                 &kp KP_DOT  &kp N0  &kp BACKSPACE
             >;
         };
 
         FUN {
             display-name = "Fun";
             bindings = <
-&trans  &trans  &trans    &trans  &trans  &trans                   &mmv MOVE_UP               &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
-&trans  &trans  &kp LALT  &trans  &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans  &trans  &trans    &trans  &trans  &trans                   &kp C_MUTE   &mmv MOVE_DOWN                     &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
-                          &trans  &trans  &trans    &trans   &trans  &trans
+&trans  &trans  &trans    &trans  &trans  &trans                                &mmv MOVE_UP                     &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
+&trans  &trans  &kp LALT  &trans  &trans  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans  &trans  &trans    &trans  &trans  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
+                          &trans  &trans  &trans                                                                 &trans   &trans  &trans
             >;
         };
 
         SYM {
             display-name = "Symbol";
             bindings = <
-&kp TAB    &kp LS(FR_LBRC)  &kp FR_LBRC    &kp FR_RBRC  &kp LS(FR_RBRC)  &kp FR_RCBR                            &mmv MOVE_UP               &trans  &trans         &trans                &trans         &trans             &kp EQUAL
-&kp CAPS   &kp COLON        &kp FR_LPRN    &kp FR_RPRN  &kp CARET        &kp LS(SINGLE_QUOTE)                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp LA(LS(L))  &kp RIGHT_BRACKET  &trans
-&kp LSHFT  &kp GRAVE        &kp LS(GRAVE)  &kp AT       &kp HASH         &kp PIPE                               &kp C_MUTE   &mmv MOVE_DOWN                     &trans  &kp RA(N)      &trans                &kp LALT       &studio_unlock     &rgb_ug RGB_TOG
-                                           &kp LPAR     &kp RPAR         &kp MINUS               &trans  &trans         &trans
+&kp TAB    &kp LS(FR_LBRC)  &kp FR_LBRC    &kp FR_RBRC  &kp LS(FR_RBRC)  &kp FR_RCBR                                         &mmv MOVE_UP                     &trans  &trans         &trans                &trans         &trans             &kp EQUAL
+&kp CAPS   &kp COLON        &kp FR_LPRN    &kp FR_RPRN  &kp CARET        &kp LS(SINGLE_QUOTE)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp LA(LS(L))  &kp RIGHT_BRACKET  &trans
+&kp LSHFT  &kp GRAVE        &kp LS(GRAVE)  &kp AT       &kp HASH         &kp PIPE              &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(N)      &trans                &kp LALT       &studio_unlock     &rgb_ug RGB_TOG
+                                           &kp LPAR     &kp RPAR         &kp MINUS                                                                            &trans  &trans         &trans
             >;
         };
 
         SYMBOLS {
             display-name = "Symbol2";
             bindings = <
-&kp NON_US_BACKSLASH  &kp N1     &kp N2  &kp N3  &kp N4  &kp N5                   &mmv MOVE_UP               &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
-&none                 &trans     &trans  &trans  &trans  &none                    &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &none   &trans  &trans  &trans  &trans  &none
-&none                 &kp GRAVE  &none   &none   &none   &none                    &kp C_MUTE   &mmv MOVE_DOWN                     &none   &none   &none   &none   &none   &none
-                                         &none   &none   &none     &none   &none   &none
+&kp NON_US_BACKSLASH  &kp N1     &kp N2  &kp N3  &kp N4  &kp N5                                &mmv MOVE_UP                     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
+&none                 &trans     &trans  &trans  &trans  &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &trans  &trans  &trans  &trans  &none
+&none                 &kp GRAVE  &none   &none   &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &none   &none   &none   &none   &none   &none
+                                         &none   &none   &none                                                                  &none   &none   &none
             >;
         };
 
         tmux {
             display-name = "Tmux";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_UP               &tmux_vertical    &tmux_7  &tmux_8  &tmux_9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &tmux_horizontal  &tmux_4  &tmux_5  &tmux_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &kp C_MUTE   &mmv MOVE_DOWN                     &tmux_new         &tmux_1  &tmux_2  &tmux_3  &trans  &trans
-                        &trans  &trans  &trans    &trans            &tmux_0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &mmv MOVE_UP                     &tmux_vertical    &tmux_7  &tmux_8  &tmux_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &tmux_horizontal  &tmux_4  &tmux_5  &tmux_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &tmux_new         &tmux_1  &tmux_2  &tmux_3  &trans  &trans
+                        &trans  &trans  &trans                                                                 &trans            &tmux_0  &trans
             >;
         };
 
         aerospace {
             display-name = "Aerospace";
             bindings = <
-&none  &none  &lt 10 W  &none  &none           &none                   &mmv MOVE_UP               &none  &kp LC(NUMBER_7)  &kp LC(NUMBER_8)  &kp LC(NUMBER_9)  &none  &none
-&none  &none  &none     &none  &kp LEFT_SHIFT  &none                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &none  &kp LC(NUMBER_4)  &kp LC(NUMBER_5)  &kp LC(NUMBER_6)  &none  &none
-&none  &none  &none     &none  &none           &none                   &kp C_MUTE   &mmv MOVE_DOWN                     &none  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &none  &none
-                        &none  &none           &none    &none  &kp LC(NUMBER_0)  &none
+&none  &none  &lt 10 W  &none  &none           &none                                &mmv MOVE_UP                     &none  &kp LC(NUMBER_7)  &kp LC(NUMBER_8)  &kp LC(NUMBER_9)  &none  &none
+&none  &none  &none     &none  &kp LEFT_SHIFT  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp LC(NUMBER_4)  &kp LC(NUMBER_5)  &kp LC(NUMBER_6)  &none  &none
+&none  &none  &none     &none  &none           &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &none  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &none  &none
+                        &none  &none           &none                                                                 &none  &kp LC(NUMBER_0)  &none
             >;
         };
 
         aerospace_move {
             display-name = "Aerospace";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_UP               &trans            &trans            &trans                &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT               &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP_ARROW))  &kp LA(LC(RIGHT))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &kp C_MUTE   &mmv MOVE_DOWN                     &trans            &trans            &trans                &trans             &trans  &trans
-                        &trans  &trans  &trans    &trans            &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                &mmv MOVE_UP                     &trans            &trans            &trans                &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP_ARROW))  &kp LA(LC(RIGHT))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans            &trans            &trans                &trans             &trans  &trans
+                        &trans  &trans  &trans                                                                 &trans            &trans            &trans
             >;
+        };
+
+        Volume {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none         &none       &none              &none            &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &none  &none  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none           &none         &none       &none              &none            &none  &none  &none
+                     &none  &none  &none                                &none       &none              &none
+            >;
+
+            label = "Vol";
+        };
+
+        Brightness {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none         &none  &none                 &none                 &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none           &none         &none  &none                 &none                 &none  &none  &none
+                     &none  &none  &none                                &none  &none                 &none
+            >;
+
+            label = "Bright";
         };
     };
 };
