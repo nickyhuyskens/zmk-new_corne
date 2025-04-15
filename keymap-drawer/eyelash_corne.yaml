@@ -640,10 +640,10 @@ layers:
   UBU_SYM:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: 'AltGr+[', s: 'AltGr+{'}
-  - AltGr+(
+  - {t: AltGr+9, s: AltGr+(}
   - {t: AltGr+0, s: AltGr+)}
   - {t: 'AltGr+]', s: 'AltGr+}'}
-  - {t: AltGr+', s: AltGr+"}
+  - {t: AltGr+\, s: AltGr+|}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -667,8 +667,8 @@ layers:
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - {t: Sft+`, s: Sft+~}
+  - \
+  - Sft+\
   - '@'
   - '#'
   - '|'
