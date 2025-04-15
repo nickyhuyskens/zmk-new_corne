@@ -348,9 +348,9 @@
         UBUNTU_SYM {
             display-name = "UBU_SYM";
             bindings = <
-&trans  &kp RA(LEFT_BRACKET)  &kp RA(LEFT_PARENTHESIS)  &kp RA(N0)   &kp RA(RIGHT_BRACKET)  &kp RA(SINGLE_QUOTE)                                &mmv MOVE_UP                     &trans  &trans         &trans                &trans            &trans             &kp EQUAL
+&trans  &kp RA(LEFT_BRACKET)  &kp RA(N9)                &kp RA(N0)   &kp RA(RIGHT_BRACKET)  &kp RA(BACKSLASH)                                   &mmv MOVE_UP                     &trans  &trans         &trans                &trans            &trans             &kp EQUAL
 &trans  &kp COLON             &kp FR_LPRN               &kp FR_RPRN  &kp CARET              &kp LS(SINGLE_QUOTE)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp RA(NUMBER_1)  &kp RIGHT_BRACKET  &trans
-&trans  &kp GRAVE             &kp LS(GRAVE)             &kp AT       &kp HASH               &kp PIPE              &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(SLASH)  &trans                &kp LALT          &studio_unlock     &rgb_ug RGB_TOG
+&trans  &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp AT       &kp HASH               &kp PIPE              &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(SLASH)  &trans                &kp LALT          &studio_unlock     &rgb_ug RGB_TOG
                                                         &kp LPAR     &kp RPAR               &kp MINUS                                                                            &trans  &trans         &trans
             >;
         };
