@@ -164,6 +164,20 @@
             bindings = <&kp LC(B) &kp NUMBER_3>;
             label = "TMUX_HORIZONTAL";
         };
+
+        switch_ubuntu: switch_ubuntu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 13>;
+            label = "SWITCH_UBUNTU";
+        };
+
+        create_mbp: create_mbp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "CREATE_MBP";
+        };
     };
 
     keymap {
@@ -317,6 +331,40 @@
             >;
 
             label = "Bright";
+        };
+
+        UBUNTU_BASE {
+            display-name = "base";
+            bindings = <
+&u_lt 1 TAB                    &u_lt 9 Q             &kp W             &kp E                 &kp R               &u_lt 8 T                                 &mmv MOVE_UP                     &kp Y         &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
+&u_ht LS(LA(LC(LGUI))) ESCAPE  &u_ht LEFT_COMMAND A  &u_ht LEFT_ALT S  &u_ht LEFT_CONTROL D  &u_ht LEFT_SHIFT F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H         &u_ht LEFT_SHIFT J  &u_ht LEFT_CONTROL K  &u_ht LEFT_ALT L  &u_ht LEFT_COMMAND SEMI  &kp ENTER
+&kp LSHFT                      &kp Z                 &kp X             &kp C                 &u_lt 11 V          &u_lt 12 B   &kp SPACE                    &mmv MOVE_DOWN                   &kp N         &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
+                                                                       &u_lt 5 LEFT_COMMAND  &u_lt 4 SPACE       &u_lt 3 TAB                                                                &u_lt 15 RET  &u_lt 14 SPACE      &kp BACKSPACE
+            >;
+
+            label = "UBU_B";
+        };
+
+        UBUNTU_SYM {
+            display-name = "UBU_SYM";
+            bindings = <
+&trans  &kp RA(C)      &kp RA(RS(N9))     &kp RA(N0)   &kp RA(DOLLAR)  &kp RA(RIGHT_BRACE)                                 &mmv MOVE_UP                     &trans  &trans         &trans                &trans            &trans             &kp EQUAL
+&trans  &kp COLON      &kp FR_LPRN        &kp FR_RPRN  &kp CARET       &kp LS(SINGLE_QUOTE)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp RA(NUMBER_1)  &kp RIGHT_BRACKET  &trans
+&trans  &kp BACKSLASH  &kp LS(BACKSLASH)  &kp AT       &kp HASH        &kp PIPE              &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(EQUAL)  &trans                &kp LALT          &studio_unlock     &rgb_ug RGB_TOG
+                                          &kp LPAR     &kp RPAR        &kp MINUS                                                                            &trans  &trans         &trans
+            >;
+        };
+
+        UBUNTU_SYMBOLS {
+            display-name = "Symbol2";
+            bindings = <
+&kp RA(NUMBER_2)  &kp N1     &kp N2  &kp N3  &kp N4  &kp N5                                &mmv MOVE_UP                     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
+&none             &trans     &trans  &trans  &trans  &none                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &trans  &trans  &trans  &trans  &none
+&none             &kp GRAVE  &none   &none   &none   &none   &kp C_MUTE                    &mmv MOVE_DOWN                   &none   &none   &none   &none   &none   &none
+                                     &none   &none   &none                                                                  &none   &none   &none
+            >;
+
+            label = "UBU_SYM2";
         };
     };
 };
