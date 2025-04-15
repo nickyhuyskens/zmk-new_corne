@@ -172,11 +172,11 @@
             label = "SWITCH_UBUNTU";
         };
 
-        create_mbp: create_mbp {
+        switch_mbp: switch_mbp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
-            label = "CREATE_MBP";
+            label = "SWITCH_MBP";
         };
     };
 
@@ -208,10 +208,10 @@
 
             display-name = "BLE";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE                                                                    &kp RET   &trans    &kp RALT
+&kp TAB     &kp N1       &kp N2          &kp N3        &kp N4        &kp N5                                      &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&bt BT_CLR  &switch_mbp  &switch_ubuntu  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT   &trans       &trans          &trans        &trans        &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &trans    &trans    &trans    &trans     &trans  &trans
+                                         &kp LGUI      &trans        &kp SPACE                                                                    &kp RET   &trans    &kp RALT
             >;
         };
 
