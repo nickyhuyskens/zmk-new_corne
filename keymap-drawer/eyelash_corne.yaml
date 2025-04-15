@@ -638,7 +638,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   UBU_SYM:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Alt+3, s: Alt+#}
   - {t: 'AltGr+[', s: 'AltGr+{'}
   - {t: AltGr+9, s: AltGr+(}
   - {t: AltGr+0, s: AltGr+)}
@@ -704,7 +704,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - UBU_SYM
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
