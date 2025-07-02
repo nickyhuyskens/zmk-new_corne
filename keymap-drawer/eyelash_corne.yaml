@@ -349,7 +349,7 @@ layers:
   - {t: AltGr+5, s: AltGr+%}
   - {t: AltGr+-, s: AltGr+_}
   - {t: Sft+AltGr+-, s: Sft+AltGr+_}
-  - {t: AltGr+=, s: AltGr++}
+  - '&backtick_macro'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
