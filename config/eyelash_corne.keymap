@@ -178,6 +178,13 @@
             bindings = <&bt BT_SEL 0 &to 0>;
             label = "SWITCH_MBP";
         };
+
+        backtick_macro: backtick_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp SPACE>;
+            label = "BACKTICK_MACRO";
+        };
     };
 
     keymap {
@@ -276,7 +283,7 @@
         SYM {
             display-name = "Symbol";
             bindings = <
-&kp TAB    &kp LS(FR_LBRC)  &kp FR_LBRC    &kp FR_RBRC  &kp LS(FR_RBRC)  &kp FR_RCBR                                         &mmv MOVE_UP                     &trans  &trans         &trans                &trans         &trans             &kp EQUAL
+&kp TAB    &kp LS(FR_LBRC)  &kp FR_LBRC    &kp FR_RBRC  &kp LS(FR_RBRC)  &backtick_macro                                     &mmv MOVE_UP                     &trans  &trans         &trans                &trans         &trans             &kp EQUAL
 &kp CAPS   &kp COLON        &kp FR_LPRN    &kp FR_RPRN  &kp CARET        &kp LS(SINGLE_QUOTE)                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp LA(LS(L))  &kp RIGHT_BRACKET  &trans
 &kp LSHFT  &kp GRAVE        &kp LS(GRAVE)  &kp AT       &kp HASH         &kp PIPE              &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(N)      &trans                &kp LALT       &studio_unlock     &rgb_ug RGB_TOG
                                            &kp LPAR     &kp RPAR         &kp MINUS                                                                            &trans  &trans         &trans
