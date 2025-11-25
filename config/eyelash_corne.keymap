@@ -199,10 +199,10 @@
 
             display-name = "base";
             bindings = <
-&u_lt 2 TAB                          &u_lt 10 Q            &kp W             &kp E                 &kp R               &u_lt 9 T                                 &mmv MOVE_UP                     &kp Y          &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
-&u_ht LA(LC(LG(LEFT_SHIFT))) ESCAPE  &u_ht LEFT_COMMAND A  &u_ht LEFT_ALT S  &u_ht LEFT_CONTROL D  &u_ht LEFT_SHIFT F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &u_ht LEFT_SHIFT J  &u_ht LEFT_CONTROL K  &u_ht LEFT_ALT L  &u_ht LEFT_COMMAND SEMI  &kp ENTER
-&kp LSHFT                            &kp Z                 &kp X             &kp C                 &u_lt 12 V          &u_lt 13 B   &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
-                                                                             &u_lt 6 LEFT_COMMAND  &u_lt 5 SPACE       &u_lt 4 TAB                                                                &u_lt 8 SPACE  &u_lt 7 SPACE       &kp BACKSPACE
+&u_lt 2 TAB            &u_lt 10 Q            &kp W             &kp E                 &kp R               &u_lt 9 T                                 &mmv MOVE_UP                     &kp Y          &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
+&u_ht CAPSLOCK ESCAPE  &u_ht LEFT_COMMAND A  &u_ht LEFT_ALT S  &u_ht LEFT_CONTROL D  &u_ht LEFT_SHIFT F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &u_ht LEFT_SHIFT J  &u_ht LEFT_CONTROL K  &u_ht LEFT_ALT L  &u_ht LEFT_COMMAND SEMI  &kp ENTER
+&kp LSHFT              &kp Z                 &kp X             &kp C                 &u_lt 12 V          &u_lt 13 B   &kp SPACE                    &mmv MOVE_DOWN                   &kp N          &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
+                                                               &u_lt 6 LEFT_COMMAND  &u_lt 5 SPACE       &u_lt 4 TAB                                                                &u_lt 8 SPACE  &u_lt 7 SPACE       &kp BACKSPACE
             >;
         };
 
