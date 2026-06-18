@@ -640,8 +640,8 @@ layers:
   UBU_SYM:
   - Alt+"
   - {t: '[', s: '{'}
-  - '{'
-  - '}'
+  - {t: Alt+9, s: Alt+(}
+  - {t: AltGr+0, s: AltGr+)}
   - {t: ']', s: '}'}
   - {t: \, s: '|'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
