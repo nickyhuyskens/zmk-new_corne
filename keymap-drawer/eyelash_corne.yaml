@@ -639,11 +639,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   UBU_SYM:
   - Alt+"
-  - {t: '[', s: '{'}
-  - Alt+ç
-  - AltGr+à
-  - AltGr+$
-  - {t: \, s: '|'}
+  - {t: 'AltGr+[', s: 'AltGr+{'}
+  - AltGr+{
+  - AltGr+}
+  - {t: 'AltGr+]', s: 'AltGr+}'}
+  - {t: Alt+\, s: Alt+|}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
