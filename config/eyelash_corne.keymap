@@ -355,10 +355,10 @@
         UBUNTU_SYM {
             display-name = "UBU_SYM";
             bindings = <
-&kp LA(DOUBLE_QUOTES)  &kp RA(LEFT_BRACKET)  &kp RA(LEFT_BRACE)        &kp RA(RIGHT_BRACE)  &kp RA(RIGHT_BRACKET)  &kp LA(BACKSLASH)                                &mmv MOVE_UP                     &trans  &trans         &trans                &trans             &trans             &kp EQUAL
-&trans                 &kp COLON             &kp FR_LPRN               &kp FR_RPRN          &kp CARET              &kp GRAVE                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp RA(AMPERSAND)  &kp RIGHT_BRACKET  &trans
-&trans                 &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp AT               &kp HASH               &kp PIPE           &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(SLASH)  &trans                &kp LALT           &studio_unlock     &rgb_ug RGB_TOG
-                                                                       &kp LPAR             &kp RPAR               &kp MINUS                                                                         &trans  &trans         &trans
+&kp LA(DOUBLE_QUOTES)  &kp RA(LEFT_BRACKET)  &kp RA(LEFT_PARENTHESIS)  &kp RA(RIGHT_PARENTHESIS)  &kp RA(RIGHT_BRACKET)  &kp LA(BACKSLASH)                                &mmv MOVE_UP                     &trans  &trans         &trans                &trans         &trans             &kp EQUAL
+&trans                 &kp COLON             &kp FR_LPRN               &kp FR_RPRN                &kp CARET              &kp GRAVE                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &carret_macro  &kp LS(SINGLE_QUOTE)  &kp LA(LS(L))  &kp RIGHT_BRACKET  &trans
+&trans                 &kp NON_US_BACKSLASH  &kp LS(NON_US_BACKSLASH)  &kp AT                     &kp HASH               &kp PIPE           &kp C_MUTE                    &mmv MOVE_DOWN                   &trans  &kp RA(SLASH)  &trans                &kp LALT       &studio_unlock     &rgb_ug RGB_TOG
+                                                                       &kp LPAR                   &kp RPAR               &kp MINUS                                                                         &trans  &trans         &trans
             >;
         };
 
