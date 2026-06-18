@@ -640,9 +640,9 @@ layers:
   UBU_SYM:
   - Alt+"
   - {t: '[', s: '{'}
-  - {t: Alt+9, s: Alt+(}
-  - {t: AltGr+0, s: AltGr+)}
-  - {t: ']', s: '}'}
+  - Alt+ç
+  - AltGr+à
+  - AltGr+$
   - {t: \, s: '|'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
