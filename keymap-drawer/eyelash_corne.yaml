@@ -638,10 +638,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   UBU_SYM:
-  - Alt+"
+  - {t: AltGr+3, s: AltGr+#}
   - {t: 'AltGr+[', s: 'AltGr+{'}
-  - {t: '9', s: (}
-  - {t: Alt+0, s: Alt+)}
+  - {t: AltGr+9, s: AltGr+(}
+  - {t: AltGr+0, s: AltGr+)}
   - {t: 'AltGr+]', s: 'AltGr+}'}
   - {t: Alt+\, s: Alt+|}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -663,7 +663,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&carret_macro'
   - {t: Sft+', s: Sft+"}
-  - Alt+Sft+L
+  - Sft+AltGr+L
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
