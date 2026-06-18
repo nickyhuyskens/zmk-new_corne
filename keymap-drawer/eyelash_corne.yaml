@@ -640,8 +640,8 @@ layers:
   UBU_SYM:
   - Alt+"
   - {t: 'AltGr+[', s: 'AltGr+{'}
-  - AltGr+{
-  - AltGr+}
+  - AltGr+(
+  - AltGr+)
   - {t: 'AltGr+]', s: 'AltGr+}'}
   - {t: Alt+\, s: Alt+|}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -663,7 +663,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&carret_macro'
   - {t: Sft+', s: Sft+"}
-  - AltGr+&
+  - Alt+Sft+L
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
